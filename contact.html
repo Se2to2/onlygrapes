@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.png" type="image/png">
+    <script src="script.js" defer></script>
+    <title>Contact — OnlyGrapes</title>
+</head>
+
+<body>
+    <header class="top-bar">
+    <img src="logo.png" alt="OnlyGrapes" class="logo" />
+    <div class="company-name">OnlyGrapes</div>
+    <div class="nav-links">
+        <a href="Index.HTML">Home</a>
+
+        <!-- About dropdown -->
+        <div class="dropdown">
+          <span class="dropdown-toggle">About ▾</span>
+          <div class="dropdown-menu">
+            <a href="Index.HTML#about" class="dropdown-item">About Us</a>
+            <a href="Index.HTML#team" class="dropdown-item">Meet the Team</a>
+            <a href="Index.HTML#faq" class="dropdown-item">FAQ</a>
+          </div>
+        </div>
+
+        <!-- More dropdown -->
+        <div class="dropdown">
+          <span class="dropdown-toggle">More ▾</span>
+          <div class="dropdown-menu">
+            <a href="devlog.html" class="dropdown-item">Devlog</a>
+            <a href="presskit.html" class="dropdown-item">Press Kit</a>
+          </div>
+        </div>
+    </div>
+</header>
+
+    <div class="contact-wrapper">
+
+        <!-- LEFT PANEL -->
+        <div class="contact-left">
+            <p class="page-label">Get in Touch</p>
+            <h1 class="page-title">Say <span class="page-title-accent">Something.</span></h1>
+            <p class="page-subtitle">We don't bite. Usually.<br>Press, collabs, or just curious — reach out.</p>
+
+            <div class="ct-links">
+                <a href="mailto:OnlyGrapes@gmail.com" class="ct-link">
+                    <span class="ct-link-icon">✉</span>
+                    <div class="ct-link-body">
+                        <span class="ct-link-label">Email</span>
+                        <span class="ct-link-value">OnlyGrapes@gmail.com</span>
+                    </div>
+                </a>
+                <a href="#" class="ct-link">
+                    <span class="ct-link-icon">💬</span>
+                    <div class="ct-link-body">
+                        <span class="ct-link-label">Discord</span>
+                        <span class="ct-link-value">discord.gg/onlygrapes</span>
+                    </div>
+                </a>
+                <a href="#" class="ct-link">
+                    <span class="ct-link-icon">🐙</span>
+                    <div class="ct-link-body">
+                        <span class="ct-link-label">GitHub</span>
+                        <span class="ct-link-value">github.com/onlygrapes</span>
+                    </div>
+                </a>
+                <a href="#" class="ct-link">
+                    <span class="ct-link-icon">🎮</span>
+                    <div class="ct-link-body">
+                        <span class="ct-link-label">itch.io</span>
+                        <span class="ct-link-value">onlygrapes.itch.io</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="ct-join">
+                <div class="ct-join-title">Want to join?</div>
+                <p class="ct-join-text">We're four people with one brain cell and infinite ambition. If that sounds like your kind of chaos, send us a message. We might say yes.</p>
+            </div>
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="contact-right">
+            <div class="ct-form" id="contactForm">
+                <div class="ct-field">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your name" />
+                </div>
+                <div class="ct-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="your@email.com" />
+                </div>
+                <div class="ct-field">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" placeholder="What's this about?" />
+                </div>
+                <div class="ct-field">
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="Okay hear me out..."></textarea>
+                </div>
+                <button class="ct-submit" onclick="handleSubmit()">Send It →</button>
+                <p class="ct-note">We'll get back to you. Eventually. We're busy making games.</p>
+            </div>
+
+            <div class="ct-success" id="successMsg">
+                <div class="ct-success-icon">🍇</div>
+                <div class="ct-success-title">Message sent.</div>
+                <p class="ct-success-text">Nice. We got it. We'll respond when we surface from the Discord rabbit hole we're currently in.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="site-footer">
+        <span>Designed & Developed by <strong>OnlyGrapes</strong> — Espinas · Albayda · Pangan · De Jesus · BSCS-22A1</span>
+        <span class="footer-copy">© 2025 OnlyGrapes</span>
+    </footer>
+
+    <script>
+        function handleSubmit() {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !message) {
+                alert('Fill in at least your name, email, a

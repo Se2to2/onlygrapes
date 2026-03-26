@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.png" type="image/png">
+    <script src="script.js" defer></script>
+    <title>Devlog — OnlyGrapes</title>
+</head>
+
+<body>
+    <header class="top-bar">
+    <img src="logo.png" alt="OnlyGrapes" class="logo" />
+    <div class="company-name">OnlyGrapes</div>
+    <div class="nav-links">
+        <a href="Index.HTML">Home</a>
+
+        <!-- About dropdown -->
+        <div class="dropdown">
+          <span class="dropdown-toggle">About ▾</span>
+          <div class="dropdown-menu">
+            <a href="Index.HTML#about" class="dropdown-item">About Us</a>
+            <a href="Index.HTML#team" class="dropdown-item">Meet the Team</a>
+            <a href="Index.HTML#faq" class="dropdown-item">FAQ</a>
+          </div>
+        </div>
+
+        <!-- More dropdown -->
+        <div class="dropdown">
+          <span class="dropdown-toggle">More ▾</span>
+          <div class="dropdown-menu">
+            <a href="presskit.html" class="dropdown-item">Press Kit</a>
+            <a href="contact.html" class="dropdown-item">Contact</a>
+          </div>
+        </div>
+    </div>
+</header>
+
+    <div class="page-wrapper">
+
+        <p class="page-label">Behind the Build</p>
+        <h1 class="page-title">Dev<span class="page-title-accent">log</span></h1>
+        <p class="page-subtitle">What we're thinking. What we're breaking.<br>What almost shipped and didn't.</p>
+
+        <!-- FILTERS -->
+        <div class="dl-filters">
+            <button class="dl-filter active" onclick="filterPosts('all', this)">All</button>
+            <button class="dl-filter" onclick="filterPosts('update', this)">Updates</button>
+            <button class="dl-filter" onclick="filterPosts('design', this)">Design</button>
+            <button class="dl-filter" onclick="filterPosts('dev', this)">Dev</button>
+            <button class="dl-filter" onclick="filterPosts('audio', this)">Audio</button>
+        </div>
+
+        <!-- POSTS -->
+        <div class="dl-posts" id="postList">
+
+            <div class="dl-post" data-tag="update" onclick="togglePost(this)">
+                <div class="dl-post-meta">
+                    <span class="dl-post-tag">Update</span>
+                    <span class="dl-post-date">Dec 15, 2025</span>
+                </div>
+                <div class="dl-post-title">okay hear me out — we're actually doing this</div>
+                <p class="dl-post-excerpt">OnlyGrapes is officially a thing. We have a name, a logo, a Discord server with too many channels, and a shared Google Doc that is mostly just memes. First post. No idea what we're doing. Let's go.</p>
+                <div class="dl-post-body">
+                    <p>So here's the situation: four people in a Discord call at 2am decided to start a game studio. No business plan. No investors. No adults. Just the unwavering belief that the games we actually want to play don't exist yet — and that we should be the ones to build them.</p>
+                    <p style="margin-top:12px">We have a name. We have a logo that Rayven made in one sitting while the rest of us watched and contributed nothing useful. We have a Discord server that already has 14 channels and counting, most of which will never be used. And we have a Google Doc titled "ideas??" that is currently 90% memes and 10% one actual idea that might be kind of fire.</p>
+                    <p style="margin-top:12px">This is the first devlog. There will be more. We have no idea where this goes. Let's find out.</p>
+                </div>
+                <div class="dl-post-footer">
+                    <span class="dl-post-author">— Steven James Espinas</span>
+                    <span class="dl-read-more">Read more →</span>
+                </div>
+            </div>
+
+            <div class="dl-post" data-tag="design" onclick="togglePost(this)">
+                <div class="dl-post-meta">
+                    <span class="dl-post-tag">Design</span>
+                    <span class="dl-post-date">Dec 22, 2025</span>
+                </div>
+                <div class="dl-post-title">building the website at 3am: a survival guide</div>
+                <p class="dl-post-excerpt">Rayven said "I have a vision." Four hours later we had a color palette, a font choice we'd fight someone over, and absolutely zero functioning nav links. Progress.</p>
+                <div class="dl-post-body">
+                    <p>The color palette came first. Rayven opened Figma, stared at a blank canvas for about 45 seconds, then typed the exact hex codes without looking anything up. We don't know how. We don't ask questions.</p>
+                    <p style="margin-top:12px">The font took longer. An hour of deliberation, two "final decisions" that weren't final, and one heated argument about whether Georgia was too safe. It's Georgia. We kept Georgia. We'd fight someone over Georgia.</p>
+                    <p style="margin-top:12px">Nav links still don't work as of writing this. We're choosing to call that "iterative development." The vibe is there though. The vibe is very much there.</p>
+                </div>
+                <div class="dl-post-footer">
+                    <span class="dl-post-author">— Rayven Pangan</span>
+                    <span class="dl-read-more">Read more →</span>
+                </div>
+            </div>
+
+            <div class="dl-post" data-tag="audio" onclick="togglePost(this)">
+                <div class="dl-post-meta">
+                    <span class="dl-post-tag">Audio</span>
+                    <span class="dl-post-date">Jan 4, 2026</span>
+                </div>
+                <div class="dl-post-title">sound design is just vibes with a deadline</div>
+                <p class="dl-post-excerpt">Noric walked us through his process for the first time. It involves a lot of headphones, a suspiciously large number of browser tabs, and the phrase "no wait this one." We're not complaining. It slaps.</p>
+                <div class="dl-post-body">
+                    <p>Noric shared his screen and we counted 34 browser tabs. He could not explain what most of them were for. He also had three different audio editors open, a YouTube video paused mid-frame, and a Spotify playlist titled "for when it's 4am and ur building something."</p>
+                    <p style="margin-top:12px">The process was: play a sound, say "no," play another sound, say "no," play a third sound, say "no wait this one" and then modify it for 25 minutes until it was unrecognizable from the original. The result was incredible. We have no idea how he did it. He probably doesn't either.</p>
+                    <p style="margin-top:12px">The game doesn't have a name yet but it has a soundscape now and honestly that feels more real.</p>
+                </div>
+                <div class="dl-post-footer">
+                    <span class="dl-post-author">— Noric Albayda Jr.</span>
+                    <span class="dl-read-more">Read more →</span>
+                </div>
+            </div>
+
+            <div class="dl-post" data-tag="dev" onclick="togglePost(this)">
+                <div class="dl-post-meta">
+                    <span class="dl-post-tag">Dev</span>
+                    <span class="dl-post-date">Jan 18, 2026</span>
+                </div>
+                <div class="dl-post-title">the backend works. we are also surprised.</div>
+                <p class="dl-post-excerpt">Steven got the backend running. It works on his machine. It also worked on the other machines. This is a historic event. We are writing this down so future us knows it was possible.</p>
+                <div class="dl-post-body">
+                    <p>To be fully transparent about the timeline: it did not work for three days. There was a period where it worked on Steven's machine and nowhere else, which was described as "a good sign, actually" in a tone that convinced nobody. There was a period where it worked on nobody's machine, which was not described as anything because we all went quiet.</p>
+                    <p style="margin-top:12px">Then on a Thursday night, with no warning and no explanation, it just worked. On all machines. We tested it four times because we didn't believe it. It kept working. Steven sent "YOOO" in all caps to the Discord. Noric replied with a grape emoji. That was our code review process.</p>
+                    <p style="margin-top:12px">Shipping is inevitable now. The infrastructure is real. We are real. This is happening.</p>
+                </div>
+                <div class="dl-post-footer">
+                    <span class="dl-post-author">— Steven James Espinas</span>
+                    <span class="dl-read-more">Read more →</span>
+                </div>
+            </div>
+
+            <div class="dl-post" data-tag="design" onclick="togglePost(this)">
+                <div class="dl-post-meta">
+                    <span class="dl-post-tag">Design</span>
+                    <span class="dl-post-date">Feb 2, 2026</span>
+                </div>
+                <div class="dl-post-title">jireh dropped assets and nobody was ready</div>
+                <p class="dl-post-excerpt">Jireh sent the first batch of game assets into the Discord at midnight. The chat went quiet for about 30 seconds. Then everyone started typing at once. That's our review process. It passed.</p>
+                <div class="dl-post-body">
+                    <p>There was no warning. No "hey I'm about to drop some stuff." Just: 11:58pm, a message that said "okay" and then a 47-image zip file. Forty-seven. At midnight. We opened it immediately.</p>
+                    <p style="margin-top:12px">The silence lasted about 30 seconds. In Discord terms, that's an eternity. Then Rayven typed "bro." Then Noric sent five grape emojis in a row. Then Steven started asking technical integration questions because that's how he expresses excitement.</p>
+                    <p style="margin-top:12px">The assets passed. Obviously. The game just started looking real in a way it didn't before. Jireh said "yeah I kinda went off." He did. He absolutely did.</p>
+                </div>
+                <div class="dl-post-footer">
+                    <span class="dl-post-author">— Jireh De Jesus</span>
+                    <span class="dl-read-more">Read more →</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <span>Designed & Developed by <strong>OnlyGrapes</strong> — Espinas · Albayda · Pangan · De Jesus · BSCS-22A1</span>
+        <span class="footer-copy">© 2025 OnlyGrapes</span>
+    </footer>
+
+    <script>
+        function filterPosts(tag, btn) {
+            document.querySelectorAll('.dl-filter').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            document.querySelectorAll('.dl-post').forEach(post => {
+                post.style.display = (tag === 'all' || post.dataset.tag === tag) ? 'block' : 'none';
+            });
+        }
+
+        function togglePost(post) {
+            const isExpanded = post.classList.contains('expanded');
+            document.querySelectorAll('.dl-post.expanded').forEach(p => {
+                p.classList.remove('expanded');
+                p.querySelector('.dl-read-more').textContent = 'Read more →';
+            });
+            if (!isExpanded) {
+                post.classList.add('expanded');
+                post.querySelector('.dl-read-more').textContent = 'Collapse ↑';
+            }
+        }
+    </script>
+</body>
+</html>
