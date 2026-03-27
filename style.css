@@ -5,11 +5,11 @@
 
   /* Left panel */
   --left-panel-offset-x: 0px;
-  --left-panel-offset-y: 0px;
+  --left-panel-offset-y: -180px;
 
   /* Right panel  */
   --right-panel-offset-x: 0px;
-  --right-panel-offset-y: 0px;
+  --right-panel-offset-y: -150px;
 
   /* FAQ content */
   --faq-offset-x: 0px;
@@ -128,7 +128,6 @@ body {
   z-index: -1;
 }
 
-/* Only open via .open class — no :hover */
 .dropdown.open .dropdown-menu {
   display: flex;
 }
@@ -790,7 +789,7 @@ body {
   animation: slide-fade-in 0.6s ease-out 0.65s both;
 }
 
-/* ── DEVLOG EXPAND ── */
+/* DEVLOG EXPAND  */
 .dl-post-body {
   max-height: 0;
   overflow: hidden;
@@ -817,7 +816,6 @@ body {
 
 .dl-post.expanded .dl-read-more {
   opacity: 1;
-  transform: rotate(90deg);
 }
 
 .dl-post.expanded .dl-read-more::after {
@@ -827,10 +825,6 @@ body {
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-
-/* ============================================================
-   PAGE-SPECIFIC STYLES (devlog, presskit, contact)
-   ============================================================ */
 
 /* Shared page wrapper */
 .page-wrapper {
@@ -889,7 +883,7 @@ body {
     margin-bottom: 16px;
 }
 
-/* ── DEVLOG ── */
+/* DEVLOG */
 .dl-filters {
     display: flex;
     gap: 8px;
@@ -1016,7 +1010,7 @@ body {
 
 .dl-empty-sub { font-size: 0.85rem; }
 
-/* ── PRESS KIT ── */
+/* PRESS KIT */
 .pk-about {
     background: #EDE3D4;
     border-radius: 10px;
@@ -1166,7 +1160,7 @@ body {
 
 .pk-contact-email:hover { text-decoration: underline; }
 
-/* ── CONTACT ── */
+/* CONTACT */
 .contact-wrapper {
     max-width: 820px;
     margin: 0 auto;
@@ -1351,7 +1345,7 @@ body {
     line-height: 1.7;
 }
 
-/* ── RESPONSIVE: sub-pages ── */
+/* RESPONSIVE sub-pages */
 @media (max-width: 700px) {
     .contact-wrapper {
         flex-direction: column;
@@ -1368,7 +1362,7 @@ body {
     .pk-contact-strip { flex-direction: column; gap: 12px; align-items: flex-start; }
 }
 
-/* ── FADE-IN (non-index pages) ── */
+/* FADE-IN */
 .fade-in {
     opacity: 0;
     transform: translateY(18px);
@@ -1379,7 +1373,7 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
-/* ── PAGE TRANSITIONS ── */
+/* PAGE TRANSITIONS */
 #page-transition {
   position: fixed;
   inset: 0;
@@ -1417,7 +1411,7 @@ body {
   to   { opacity: 0; }
 }
 
-/* Content enter animation (replaces fade-in for non-index pages) */
+/* Content enter animation */
 .page-enter {
   animation: content-enter 0.5s ease-out 0.2s both;
 }
@@ -1427,13 +1421,9 @@ body {
   to   { opacity: 1; }
 }
 
-/* ── CHROME (header + footer) — transitions handled via inline JS styles ── */
+/* MOBILE OVERRIDES */
 
-/* ============================================================
-   MOBILE OVERRIDES — append to the bottom of style.css
-   ============================================================ */
-
-/* ── HAMBURGER BUTTON ── */
+/* HAMBURGER BUTTON */
 .nav-hamburger {
   display: none;
   background: none;
@@ -1459,14 +1449,13 @@ body {
   transform-origin: center;
 }
 
-/* Animate to X when open */
 .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .nav-hamburger.open span:nth-child(2) { opacity: 0; }
 .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* ── MOBILE MENU DRAWER ── */
+/* MOBILE MENU DRAWER */
 .mobile-menu {
-  display: flex;          /* always flex so transitions work */
+  display: flex;         
   flex-direction: column;
   position: fixed;
   top: 60px;
@@ -1519,7 +1508,6 @@ body {
 
 /* ── HEADER MOBILE ── */
 @media (max-width: 768px) {
-  /* Override the old broken stacking */
   .top-bar {
     grid-template-columns: auto 1fr auto !important;
     grid-template-rows: 1fr !important;
@@ -1533,7 +1521,7 @@ body {
     margin: 0 !important;
   }
 
-  /* Hide the desktop nav-links */
+  /* Hide desktop nav-links */
   .nav-links {
     display: none !important;
   }
@@ -1544,14 +1532,14 @@ body {
   }
 }
 
-/* ── DOT NAV MOBILE ── */
+/* DOT NAV MOBILE*/
 @media (max-width: 768px) {
   .dot-nav {
     display: none;
   }
 }
 
-/* ── INDEX — LANDING ── */
+/* INDEX LANDING  */
 @media (max-width: 600px) {
   .landing-content {
     flex-direction: column;
@@ -1561,7 +1549,7 @@ body {
   }
 
   .landing-right {
-    display: none; /* hide logo on very small screens, text is enough */
+    display: none; 
   }
 
   .landing-actions {
@@ -1575,7 +1563,7 @@ body {
   }
 }
 
-/* ── INDEX — ABOUT ── */
+/* INDEX ABOUT */
 @media (max-width: 768px) {
   .about-content {
     padding: 0 16px;
@@ -1588,7 +1576,7 @@ body {
   }
 }
 
-/* ── INDEX — TEAM ── */
+/* INDEX TEAM */
 @media (max-width: 768px) {
   .section-team {
     height: auto;
@@ -1617,7 +1605,6 @@ body {
     margin: 0;
   }
 
-  /* Hide bulky left-panel content — just keep the heading */
   .team-label   { display: none; }
   .team-divider { display: none; }
   .team-desc    { display: none; }
@@ -1627,7 +1614,7 @@ body {
     font-size: clamp(1.8rem, 7vw, 2.5rem);
   }
 
-  /* Cards: 2x2 grid */
+  /* Cards */
   .right-panel {
     width: 100%;
     max-width: 420px;
@@ -1670,7 +1657,7 @@ body {
   .specialty-tag { font-size: 0.5rem; }
 }
 
-/* ── INDEX — FAQ ── */
+/* INDEX FAQ*/
 @media (max-width: 768px) {
   .faq-content {
     padding: 0 16px;
@@ -1681,7 +1668,7 @@ body {
   }
 }
 
-/* ── SUB-PAGES: shared page-wrapper ── */
+/* SUB-PAGES */
 @media (max-width: 768px) {
   .page-wrapper {
     padding: 80px 20px 50px;
@@ -1771,7 +1758,7 @@ body {
   }
 }
 
-/* ── PORTFOLIO — HERO ── */
+/* PORTFOLIO HERO*/
 @media (max-width: 768px) {
   .hero-name {
     font-size: clamp(2rem, 10vw, 3.5rem);
@@ -1787,7 +1774,7 @@ body {
   }
 }
 
-/* ── PORTFOLIO — ABOUT ── */
+/* PORTFOLIO ABOUT */
 @media (max-width: 768px) {
   .about-layout {
     flex-direction: column;
@@ -1804,7 +1791,7 @@ body {
   }
 }
 
-/* ── PORTFOLIO — SKILLS GRID ── */
+/* PORTFOLIO SKILLS GRID */
 @media (max-width: 768px) {
   .skills-grid {
     grid-template-columns: 1fr 1fr;
@@ -1833,14 +1820,14 @@ body {
   }
 }
 
-/* ── PORTFOLIO — CONTACT ── */
+/* PORTFOLIO CONTACT */
 @media (max-width: 768px) {
   .contact-content {
     padding: 0 16px;
   }
 }
 
-/* ── FOOTER ── */
+/* FOOTER */
 @media (max-width: 600px) {
   .site-footer {
     font-size: 0.55rem;
@@ -1854,16 +1841,14 @@ body {
   }
 }
 
-/* ── SECTION PADDING MOBILE ── */
+/* SECTION PADDING MOBILE */
 @media (max-width: 768px) {
   .section {
     padding: 70px 20px 50px;
-    /* iOS Safari 100vh fix */
     height: 100svh;
     min-height: -webkit-fill-available;
   }
 
-  /* Native touch snap scroll — replaces JS wheel hijack on mobile */
   html {
     scroll-snap-type: y mandatory;
   }

@@ -350,7 +350,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ── Devlog inline functions (need global scope) ──
+  // ── Devlog inline functions ──
   window.filterPosts = function (tag, btn) {
     document.querySelectorAll('.dl-filter').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
@@ -372,11 +372,8 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 });
 
-// ============================================================
 //  MOBILE NAV — append this to the bottom of script.js
-// ============================================================
 
-// Inject hamburger button + mobile drawer into every page's header
 function initMobileNav() {
   const topBar = document.querySelector('header.top-bar');
   if (!topBar) return;
@@ -485,3 +482,9 @@ function initMobileNav() {
 }
 
 document.addEventListener('DOMContentLoaded', initMobileNav);
+
+window.addEventListener('pageshow', function(e) {
+  if (e.persisted) {
+    window.location.reload();
+  }
+});

@@ -369,19 +369,16 @@
 }
 
 @media (max-width: 768px) {
-  /* iOS Safari 100vh fix */
   .section {
     height: 100svh;
     min-height: -webkit-fill-available;
     scroll-snap-align: start;
   }
 
-  /* Native touch snap scroll */
   html {
     scroll-snap-type: y mandatory;
   }
 
-  /* Skills grid: 2 columns on tablet */
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
@@ -408,7 +405,6 @@
     font-size: 0.78rem;
   }
 
-  /* Hide the note text — icon + name + pips is enough at this size */
   .skill-note {
     display: none;
   }
@@ -417,7 +413,6 @@
     font-size: 0.56rem;
   }
 
-  /* Shrink contact cat image so it doesn't overlap content */
   .contact-bg-image {
     width: 100px;
     opacity: 0.1;
