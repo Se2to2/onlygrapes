@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of [Name] — Developer at OnlyGrapes game studio.">
+    <meta name="description" content="Portfolio of Noric Albayda Jr. — Sound Designer & Developer at OnlyGrapes game studio.">
+    <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="portfolio-style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=block" rel="stylesheet">
     <link rel="icon" href="../../logo.png" type="image/png">
+    <script src="../../script.js" defer></script>
     <script src="portfolio-script.js" defer></script>
     <title>Albayda | OnlyGrapes</title>
 </head>
+
+<body>
 
 <nav class="dot-nav" aria-label="Page sections">
   <a class="dot" href="#hero" aria-label="Hero"></a>
@@ -18,23 +24,39 @@
   <a class="dot" href="#contact" aria-label="Contact"></a>
 </nav>
 
-<body>
-
   <header class="top-bar">
     <img src="../../logo.png" alt="OnlyGrapes" class="logo" />
     <div class="company-name">OnlyGrapes</div>
-    <nav class="nav-links" aria-label="Portfolio navigation">
-      <a href="../../index.html">← Back</a>
-      <a href="#work">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="nav-links">
+      <a href="../../Index.HTML">Home</a>
+
+      <!-- About dropdown -->
+      <div class="dropdown">
+        <span class="dropdown-toggle">About ▾</span>
+        <div class="dropdown-menu">
+          <a href="../../Index.HTML#about" class="dropdown-item">About Us</a>
+          <a href="../../Index.HTML#team" class="dropdown-item">Meet the Team</a>
+          <a href="../../Index.HTML#faq" class="dropdown-item">FAQ</a>
+        </div>
+      </div>
+
+      <!-- More dropdown -->
+      <div class="dropdown">
+        <span class="dropdown-toggle">More ▾</span>
+        <div class="dropdown-menu">
+          <a href="../../devlog.html" class="dropdown-item">Devlog</a>
+          <a href="../../presskit.html" class="dropdown-item">Press Kit</a>
+          <a href="../../contact.html" class="dropdown-item">Contact</a>
+        </div>
+      </div>
+    </div>
   </header>
 
   <!-- SECTION HERO -->
   <section id="hero" class="section section-hero">
     <div class="section-content hero-content">
       <p class="hero-tag">Sound Designer · Back-end Developer · OnlyGrapes</p>
-      <h1 class="hero-name">Noric Albayda Jr</h1>
+      <h1 class="hero-name">Noric Albayda Jr.</h1>
       <p class="hero-sub">
         Not yet where I want to be — but every patch, every script, every late night is getting me closer.
       </p>
@@ -59,22 +81,22 @@
 
       <div class="about-layout">
         <div class="about-photo">
-          <img src="../../images/Noric.png" alt="Profile photo of Your Name" />
+          <img src="../../images/Noric.png" alt="Profile photo of Noric Albayda Jr." />
         </div>
         <div class="about-body">
           <p>
-            I'm <strong>Noric Albayda Jr</strong>, a back-end developer, sound designer and a co-founder for OnlyGrapes.
-            Still early, still building, but already too deep in to turn back. The sounds in my 
+            I'm <strong>Noric Albayda Jr.</strong>, a back-end developer, sound designer and a co-founder of OnlyGrapes.
+            Still early, still building, but already too deep in to turn back. The sounds in my
             head <strong>won't stop</strong>, so I figured I'd make a career out of it.
           </p>
           <p>
-            Still in the learning phase — deep in tutorials, broken projects, 
-            and "why isn't this working" moments. But the skills are clicking, and the vision 
+            Still in the learning phase — deep in tutorials, broken projects,
+            and "why isn't this working" moments. But the skills are clicking, and the vision
             is already louder than ever.
           </p>
           <p class="about-status">
             <span class="status-dot"></span>
-            Currently listening to the sounds on his head.
+            Currently listening to the sounds in his head.
           </p>
           <div class="skills-row">
             <span class="skill-tag">Audio Editing</span>
@@ -98,7 +120,7 @@
 
         <div class="skill-card">
           <div class="skill-icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="C++" />
           </div>
           <div class="skill-info">
             <div class="skill-name">C++</div>
@@ -107,15 +129,15 @@
               <span class="level-pip active"></span>
               <span class="level-pip active"></span>
               <span class="level-pip active"></span>
-              <span class="level-label">Advance</span>
+              <span class="level-label">Advanced</span>
             </div>
-            <p class="skill-note">Understand most function, And probably will only learn niche things.</p>
+            <p class="skill-note">Understand most functions. Probably will only learn niche things from here.</p>
           </div>
         </div>
 
         <div class="skill-card">
           <div class="skill-icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" alt="Dart"/>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" alt="Dart" />
           </div>
           <div class="skill-info">
             <div class="skill-name">Dart</div>
@@ -132,7 +154,7 @@
 
         <div class="skill-card">
           <div class="skill-icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" alt="Flutter"/>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" alt="Flutter" />
           </div>
           <div class="skill-info">
             <div class="skill-name">Flutter</div>
@@ -166,10 +188,10 @@
 
         <div class="skill-card">
           <div class="skill-icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/lua/lua-original.svg" alt="LUA"/>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/lua/lua-original.svg" alt="Lua" />
           </div>
           <div class="skill-info">
-            <div class="skill-name">LUA</div>
+            <div class="skill-name">Lua</div>
             <div class="skill-level exploring">
               <span class="level-pip active"></span>
               <span class="level-pip active"></span>
@@ -183,7 +205,15 @@
 
         <div class="skill-card">
           <div class="skill-icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
+            <!-- Audio / waveform icon via SVG -->
+            <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+              <rect x="3" y="16" width="4" height="12" rx="2" fill="#2A1440" opacity="0.7"/>
+              <rect x="10" y="10" width="4" height="24" rx="2" fill="#2A1440" opacity="0.85"/>
+              <rect x="17" y="6" width="4" height="32" rx="2" fill="#2A1440"/>
+              <rect x="24" y="10" width="4" height="24" rx="2" fill="#2A1440" opacity="0.85"/>
+              <rect x="31" y="14" width="4" height="16" rx="2" fill="#2A1440" opacity="0.7"/>
+              <rect x="38" y="18" width="4" height="8" rx="2" fill="#2A1440" opacity="0.5"/>
+            </svg>
           </div>
           <div class="skill-info">
             <div class="skill-name">Audio Editing</div>
@@ -217,7 +247,7 @@
 
         <div class="skill-card skill-card-next">
           <div class="skill-icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unrealengine/unrealengine-original.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unrealengine/unrealengine-original.svg" alt="Unreal Engine" />
           </div>
           <div class="skill-info">
             <div class="skill-name">Unreal Engine</div>
@@ -231,6 +261,7 @@
             <p class="skill-note">Interesting...</p>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -259,4 +290,9 @@
   </section>
 
   <footer class="site-footer">
-    <span>Designed & Developed by <strong>OnlyGrapes</strong> — Noric Albayda Jr.
+    <span>Designed & Developed by <strong>OnlyGrapes</strong> — Espinas · Albayda · Pangan · De Jesus · BSCS-22A1</span>
+    <span class="footer-copy">© 2025 OnlyGrapes</span>
+  </footer>
+
+</body>
+</html>

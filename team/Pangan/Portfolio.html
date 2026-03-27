@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of [Name] — Developer at OnlyGrapes game studio.">
+    <meta name="description" content="Portfolio of Rayven J. Pangan — Front-End Developer & UI Designer at OnlyGrapes game studio.">
+    <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="portfolio-style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=block" rel="stylesheet">
     <link rel="icon" href="../../logo.png" type="image/png">
+    <script src="../../script.js" defer></script>
     <script src="portfolio-script.js" defer></script>
-    <title>Portfolio — Pangan, Rayven J. | OnlyGrapes</title>
+    <title>Pangan | OnlyGrapes</title>
 </head>
+
+<body>
 
 <nav class="dot-nav" aria-label="Page sections">
   <a class="dot" href="#hero" aria-label="Hero"></a>
@@ -18,16 +24,30 @@
   <a class="dot" href="#contact" aria-label="Contact"></a>
 </nav>
 
-<body>
-
   <header class="top-bar">
     <img src="../../logo.png" alt="OnlyGrapes" class="logo" />
     <div class="company-name">OnlyGrapes</div>
-    <nav class="nav-links" aria-label="Portfolio navigation">
-      <a href="../../index.html">← Back</a>
-      <a href="#work">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="nav-links">
+      <a href="../../Index.HTML">Home</a>
+
+      <div class="dropdown">
+        <span class="dropdown-toggle">About ▾</span>
+        <div class="dropdown-menu">
+          <a href="../../Index.HTML#about" class="dropdown-item">About Us</a>
+          <a href="../../Index.HTML#team" class="dropdown-item">Meet the Team</a>
+          <a href="../../Index.HTML#faq" class="dropdown-item">FAQ</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <span class="dropdown-toggle">More ▾</span>
+        <div class="dropdown-menu">
+          <a href="../../devlog.html" class="dropdown-item">Devlog</a>
+          <a href="../../presskit.html" class="dropdown-item">Press Kit</a>
+          <a href="../../contact.html" class="dropdown-item">Contact</a>
+        </div>
+      </div>
+    </div>
   </header>
 
   <!-- SECTION HERO -->
@@ -36,7 +56,7 @@
       <p class="hero-tag">Front-End Developer · UI Designer · OnlyGrapes</p>
       <h1 class="hero-name">Rayven J. Pangan</h1>
       <p class="hero-sub">
-        The journey is just starting, but layouts are taking shape, code is slowly clicking into place, 
+        The journey is just starting, but layouts are taking shape, code is slowly clicking into place,
         and the games and interactive experiences I want to build are already running loops in my mind.
       </p>
       <div class="hero-actions">
@@ -60,17 +80,16 @@
 
       <div class="about-layout">
         <div class="about-photo">
-          <img src="../../images/Pangan.png" alt="Profile photo of Your Name" />
+          <img src="../../images/Pangan.png" alt="Profile photo of Rayven J. Pangan" />
         </div>
         <div class="about-body">
           <p>
-            I'm <strong>Rayven J. Pangan</strong>, a Front-End developer by code and one of the co-founder of OnlyGrapes by accident, and an Aspiring Game Developer by addiction.
-            
+            I'm <strong>Rayven J. Pangan</strong>, a Front-End developer by code, one of the co-founders of OnlyGrapes by accident, and an Aspiring Game Developer by addiction.
           </p>
           <p>
-            Currently, I'm in the thick of learning, along with a hopeless sleep schedule. I dive into concepts that sound simple—until I actually try them and realize they might as well be written in ancient hieroglyphics. 
-            Meanwhile, my RAM is screaming under the weight of 67 tabs watching/reading tutorials, each one giving me false hope that it might be useful later. 
-            But every small win—every “aha” moment—reminds me that all this chaos is slowly turning into understanding.
+            Currently in the thick of learning, along with a hopeless sleep schedule. I dive into concepts that sound simple — until I actually try them and realize they might as well be written in ancient hieroglyphics.
+            Meanwhile, my RAM is screaming under the weight of 67 tabs watching tutorials, each one giving me false hope that it might be useful later.
+            But every small win — every "aha" moment — reminds me that all this chaos is slowly turning into understanding.
           </p>
           <p class="about-status">
             <span class="status-dot"></span>
@@ -109,7 +128,7 @@
               <span class="level-pip"></span>
               <span class="level-label">Intermediate</span>
             </div>
-            <p class="skill-note">I had to learn it for our subject, and I continued learning it to the point where I’m now making this exact portfolio.</p>
+            <p class="skill-note">I had to learn it for our subject, and I continued learning it to the point where I'm now making this exact portfolio.</p>
           </div>
         </div>
 
@@ -119,20 +138,20 @@
           </div>
           <div class="skill-info">
             <div class="skill-name">JavaScript</div>
-            <div class="skill-level intermediate">
-              <span class="level-pip active"></span>
+            <div class="skill-level exploring">
               <span class="level-pip active"></span>
               <span class="level-pip active"></span>
               <span class="level-pip"></span>
+              <span class="level-pip"></span>
               <span class="level-label">Exploring</span>
             </div>
-            <p class="skill-note">Learned JavaScript so that i can finally make a button clickable :).</p>
+            <p class="skill-note">Learned JavaScript so that I can finally make a button clickable :).</p>
           </div>
         </div>
 
         <div class="skill-card">
           <div class="skill-icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="C++" />
           </div>
           <div class="skill-info">
             <div class="skill-name">C++</div>
@@ -141,15 +160,15 @@
               <span class="level-pip active"></span>
               <span class="level-pip active"></span>
               <span class="level-pip active"></span>
-              <span class="level-label">Advance</span>
+              <span class="level-label">Advanced</span>
             </div>
-            <p class="skill-note">The second programming language I learned spent equal time writing code and questioning myself when I got an error just to see a missing semicolon.</p>
+            <p class="skill-note">The second programming language I learned — spent equal time writing code and questioning myself when I got an error, just to see a missing semicolon.</p>
           </div>
         </div>
 
         <div class="skill-card">
           <div class="skill-icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" alt="Dart" />
           </div>
           <div class="skill-info">
             <div class="skill-name">Dart</div>
@@ -166,7 +185,7 @@
 
         <div class="skill-card">
           <div class="skill-icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" alt="Flutter" />
           </div>
           <div class="skill-info">
             <div class="skill-name">Flutter</div>
@@ -177,13 +196,13 @@
               <span class="level-pip"></span>
               <span class="level-label">Intermediate</span>
             </div>
-            <p class="skill-note">Learnt it along with dart so we could make our cooked mobile apps start working.</p>
+            <p class="skill-note">Learnt it along with Dart so we could make our cooked mobile apps start working.</p>
           </div>
         </div>
 
         <div class="skill-card">
           <div class="skill-icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" />
           </div>
           <div class="skill-info">
             <div class="skill-name">Java</div>
@@ -200,7 +219,7 @@
 
         <div class="skill-card">
           <div class="skill-icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" />
           </div>
           <div class="skill-info">
             <div class="skill-name">Python</div>
@@ -211,7 +230,7 @@
               <span class="level-pip"></span>
               <span class="level-label">Intermediate</span>
             </div>
-            <p class="skill-note">This was my first programming language. That genuinely started my curiosity in learning to code, but I forgot about it because of C++.</p>
+            <p class="skill-note">This was my first programming language. It genuinely started my curiosity in learning to code, but I forgot about it because of C++.</p>
           </div>
         </div>
 
@@ -221,31 +240,31 @@
           </div>
           <div class="skill-info">
             <div class="skill-name">Unity</div>
-            <div class="skill-level intermediate">
-              <span class="level-pip active"></span>
-              <span class="level-pip active"></span>
-              <span class="level-pip active"></span>
-              <span class="level-pip"></span>
-              <span class="level-label">Exploring</span>
-            </div>
-            <p class="skill-note">First Game Engine i tried and still learning it so that i can finally make dem games ;).</p>
-          </div>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/godot/godot-original.svg" />
-          </div>
-          <div class="skill-info">
-            <div class="skill-name">Godot</div>
             <div class="skill-level exploring">
               <span class="level-pip active"></span>
               <span class="level-pip active"></span>
               <span class="level-pip"></span>
               <span class="level-pip"></span>
+              <span class="level-label">Exploring</span>
+            </div>
+            <p class="skill-note">First game engine I tried and still learning it so that I can finally make dem games ;).</p>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/godot/godot-original.svg" alt="Godot" />
+          </div>
+          <div class="skill-info">
+            <div class="skill-name">Godot</div>
+            <div class="skill-level beginner">
+              <span class="level-pip active"></span>
+              <span class="level-pip"></span>
+              <span class="level-pip"></span>
+              <span class="level-pip"></span>
               <span class="level-label">Beginner</span>
             </div>
-            <p class="skill-note">Got curious since it seemed similar to unity.</p>
+            <p class="skill-note">Got curious since it seemed similar to Unity.</p>
           </div>
         </div>
 
@@ -262,13 +281,13 @@
               <span class="level-pip"></span>
               <span class="level-label">Beginner</span>
             </div>
-            <p class="skill-note">Before I started learning it, I first thought it was a lite version of GitHub pls don't roast me.</p>
+            <p class="skill-note">Before I started learning it, I thought it was a lite version of GitHub — pls don't roast me.</p>
           </div>
         </div>
 
         <div class="skill-card skill-card-next">
           <div class="skill-icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unrealengine/unrealengine-original.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unrealengine/unrealengine-original.svg" alt="Unreal Engine" />
           </div>
           <div class="skill-info">
             <div class="skill-name">Unreal Engine</div>
@@ -279,13 +298,11 @@
               <span class="level-pip"></span>
               <span class="level-label">Up Next</span>
             </div>
-            <p class="skill-note">Will learn once i upgrade my hardware :3</p>
+            <p class="skill-note">Will learn once I upgrade my hardware :3</p>
           </div>
         </div>
 
       </div>
-
-
     </div>
   </section>
 
@@ -298,11 +315,11 @@
 
       <div class="contact-links">
         <a href="https://discord.com/users/932240582061993985" target="_blank" rel="noopener" class="contact-item">
-  <span class="contact-icon">
-    <img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="Discord" style="width:18px;height:18px;object-fit:contain;vertical-align:middle;" />
-  </span>
-  <span>Discord</span>
-</a>
+          <span class="contact-icon">
+            <img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="Discord" style="width:18px;height:18px;object-fit:contain;vertical-align:middle;" />
+          </span>
+          <span>Discord</span>
+        </a>
         <a href="https://github.com/Av3n06" target="_blank" rel="noopener" class="contact-item">
           <span class="contact-icon">⌥</span>
           <span>GitHub</span>
@@ -313,4 +330,9 @@
   </section>
 
   <footer class="site-footer">
-    <span>Designed & Developed by <strong>OnlyGrapes</strong> — Pangan
+    <span>Designed & Developed by <strong>OnlyGrapes</strong> — Espinas · Albayda · Pangan · De Jesus · BSCS-22A1</span>
+    <span class="footer-copy">© 2025 OnlyGrapes</span>
+  </footer>
+
+</body>
+</html>

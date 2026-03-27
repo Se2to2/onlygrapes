@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=block" rel="stylesheet">
     <link rel="icon" href="logo.png" type="image/png">
     <script src="script.js" defer></script>
     <title>Devlog — OnlyGrapes</title>
@@ -153,27 +155,5 @@
         <span>Designed & Developed by <strong>OnlyGrapes</strong> — Espinas · Albayda · Pangan · De Jesus · BSCS-22A1</span>
         <span class="footer-copy">© 2025 OnlyGrapes</span>
     </footer>
-
-    <script>
-        function filterPosts(tag, btn) {
-            document.querySelectorAll('.dl-filter').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            document.querySelectorAll('.dl-post').forEach(post => {
-                post.style.display = (tag === 'all' || post.dataset.tag === tag) ? 'block' : 'none';
-            });
-        }
-
-        function togglePost(post) {
-            const isExpanded = post.classList.contains('expanded');
-            document.querySelectorAll('.dl-post.expanded').forEach(p => {
-                p.classList.remove('expanded');
-                p.querySelector('.dl-read-more').textContent = 'Read more →';
-            });
-            if (!isExpanded) {
-                post.classList.add('expanded');
-                post.querySelector('.dl-read-more').textContent = 'Collapse ↑';
-            }
-        }
-    </script>
 </body>
 </html>
