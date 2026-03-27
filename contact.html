@@ -9,6 +9,54 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=block" rel="stylesheet">
     <link rel="icon" href="logo.png" type="image/png">
     <script src="script.js" defer></script>
+    <script>
+      function showAlert(title, message, onClose) {
+        const existing = document.getElementById('og-alert');
+        if (existing) existing.remove();
+
+        const overlay = document.createElement('div');
+        overlay.id = 'og-alert';
+        overlay.style.cssText = 'position:fixed;inset:0;z-index:9999;background:rgba(42,20,64,0.45);display:flex;align-items:center;justify-content:center;padding:20px;';
+
+        overlay.innerHTML = `
+          <style>
+            @keyframes og-pop{from{transform:scale(0.92);opacity:0}to{transform:scale(1);opacity:1}}
+          </style>
+          <div style="background:#F7F0E2;border:1px solid rgba(42,20,64,0.15);border-radius:12px;padding:32px 28px 24px;max-width:360px;width:100%;box-shadow:0 20px 60px rgba(42,20,64,0.2);animation:og-pop 0.25s cubic-bezier(0.34,1.56,0.64,1);text-align:center;">
+            <div style="font-size:2rem;margin-bottom:12px;">🍇</div>
+            <div style="font-size:1.1rem;font-weight:900;color:#2A1440;margin-bottom:8px;letter-spacing:-0.02em;">${title}</div>
+            <p style="font-size:0.88rem;color:#5a4f45;line-height:1.7;margin-bottom:24px;">${message}</p>
+            <button id="og-alert-btn" style="background:#2A1440;color:#F7F0E2;border:none;border-radius:6px;padding:10px 28px;font-size:0.82rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;font-family:Georgia,serif;">Got it</button>
+          </div>
+        `;
+
+        document.body.appendChild(overlay);
+
+        function close() {
+          overlay.remove();
+          if (onClose) onClose();
+        }
+
+        overlay.querySelector('#og-alert-btn').addEventListener('click', close);
+        overlay.addEventListener('click', function(e) { if (e.target === overlay) close(); });
+      }
+
+      function handleSubmit() {
+        const name    = document.getElementById('name').value.trim();
+        const email   = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        if (!name || !email || !message) {
+          showAlert('Missing Fields', 'Please fill in your name, email, and message before sending.');
+          return;
+        }
+
+        showAlert('Message Sent!', 'Nice. We got it. We\'ll respond when we surface from the Discord rabbit hole we\'re currently in.', function() {
+          document.getElementById('contactForm').style.display = 'none';
+          document.getElementById('successMsg').style.display = 'block';
+        });
+      }
+    </script>
     <title>Contact — OnlyGrapes</title>
 </head>
 
@@ -40,7 +88,7 @@
     </div>
 </header>
 
-    <div class="contact-wrapper">
+    <main class="contact-wrapper">
 
         <!-- LEFT PANEL -->
         <div class="contact-left">
@@ -49,11 +97,11 @@
             <p class="page-subtitle">We don't bite. Usually.<br>Press, collabs, or just curious — reach out.</p>
 
             <div class="ct-links">
-                <a href="mailto:OnlyGrapes@gmail.com" class="ct-link">
+                <a href="#" class="ct-link">
                     <span class="ct-link-icon">✉</span>
                     <div class="ct-link-body">
                         <span class="ct-link-label">Email</span>
-                        <span class="ct-link-value">OnlyGrapes@gmail.com</span>
+                        <span class="ct-link-value"><span class="__cf_email__" data-cfemail="0d426361744a7f6c7d687e4d6a606c6461236e6260">OnlyGrapes@gmail.com</span></span>
                     </div>
                 </a>
                 <a href="#" class="ct-link">
@@ -115,9 +163,10 @@
             </div>
         </div>
 
-    </div>
+    </main>
+        <span>Designed & Developed by <strong>OnlyGrapes</strong> — Espinas · Albayda · Pangan · De Jesus</span>
 
-    <footer class="site-footer">
+            <footer class="site-footer">
         <span>Designed & Developed by <strong>OnlyGrapes</strong> — Espinas · Albayda · Pangan · De Jesus · BSCS-22A1</span>
         <span class="footer-copy">© 2025 OnlyGrapes</span>
     </footer>

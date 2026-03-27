@@ -5,11 +5,11 @@
 
   /* Left panel */
   --left-panel-offset-x: 0px;
-  --left-panel-offset-y: -180px;
+  --left-panel-offset-y: 0px;
 
   /* Right panel  */
   --right-panel-offset-x: 0px;
-  --right-panel-offset-y: -140px;
+  --right-panel-offset-y: -40px;
 
   /* FAQ content */
   --faq-offset-x: 0px;
@@ -290,6 +290,10 @@ body {
   color: #F7F0E2;
 }
 
+.card-btn:active {
+  transform: scale(0.97);
+}
+
 /* DOT NAV */
 .dot-nav {
   position: fixed;
@@ -535,6 +539,10 @@ body {
   opacity: 0.8;
 }
 
+.btn-primary:active {
+  transform: scale(0.96);
+}
+
 .btn-secondary {
   display: inline-block;
   border: 1px solid #2A1440;
@@ -552,6 +560,10 @@ body {
 .btn-secondary:hover {
   background: #2A1440;
   color: #F7F0E2;
+}
+
+.btn-secondary:active {
+  transform: scale(0.96);
 }
 
 .landing-right {
@@ -1309,6 +1321,7 @@ body {
 }
 
 .ct-submit:hover { opacity: 0.8; }
+.ct-submit:active { transform: scale(0.97); }
 
 .ct-note {
     font-size: 0.68rem;
