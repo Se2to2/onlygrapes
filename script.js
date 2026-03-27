@@ -139,7 +139,7 @@ function showAlert(title, msg) {
     'padding:20px'
   ].join(';');
 
-  overlay.innerHTML = `
+  overlay.innerhtml = `
     <style>
       @keyframes og-pop { from{transform:scale(0.92);opacity:0} to{transform:scale(1);opacity:1} }
     </style>
@@ -383,7 +383,7 @@ function initMobileNav() {
   btn.className = 'nav-hamburger';
   btn.setAttribute('aria-label', 'Toggle navigation');
   btn.setAttribute('aria-expanded', 'false');
-  btn.innerHTML = '<span></span><span></span><span></span>';
+  btn.innerhtml = '<span></span><span></span><span></span>';
   topBar.appendChild(btn);
 
   // ── MOBILE DRAWER ──
@@ -402,23 +402,23 @@ function initMobileNav() {
 
   if (isPortfolio) {
     // Portfolio pages: simple local + back-to-site links
-    drawer.innerHTML = `
+    drawer.innerhtml = `
       <span class="mobile-menu-section">This Page</span>
       <a href="#hero">Hero</a>
       <a href="#about">About</a>
       <a href="#work">Skills</a>
       <a href="#contact">Contact</a>
       <span class="mobile-menu-section">Site</span>
-      <a href="${root}Index.HTML">Home</a>
-      <a href="${root}Index.HTML#about">About Us</a>
-      <a href="${root}Index.HTML#team">Meet the Team</a>
+      <a href="${root}index.html">Home</a>
+      <a href="${root}index.html#about">About Us</a>
+      <a href="${root}index.html#team">Meet the Team</a>
       <a href="${root}devlog.html">Devlog</a>
       <a href="${root}presskit.html">Press Kit</a>
       <a href="${root}contact.html">Contact</a>
     `;
   } else if (document.querySelector('#landing')) {
     // Main index: anchor links only
-    drawer.innerHTML = `
+    drawer.innerhtml = `
       <span class="mobile-menu-section">Navigate</span>
       <a href="#landing">Home</a>
       <a href="#about">About Us</a>
@@ -431,12 +431,12 @@ function initMobileNav() {
     `;
   } else {
     // Sub-pages: devlog / presskit / contact
-    drawer.innerHTML = `
+    drawer.innerhtml = `
       <span class="mobile-menu-section">Navigate</span>
-      <a href="${root}Index.HTML">Home</a>
-      <a href="${root}Index.HTML#about">About Us</a>
-      <a href="${root}Index.HTML#team">Meet the Team</a>
-      <a href="${root}Index.HTML#faq">FAQ</a>
+      <a href="${root}index.html">Home</a>
+      <a href="${root}index.html#about">About Us</a>
+      <a href="${root}index.html#team">Meet the Team</a>
+      <a href="${root}index.html#faq">FAQ</a>
       <span class="mobile-menu-section">More</span>
       <a href="${root}devlog.html">Devlog</a>
       <a href="${root}presskit.html">Press Kit</a>
